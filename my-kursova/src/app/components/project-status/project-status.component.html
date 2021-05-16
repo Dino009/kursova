@@ -1,0 +1,36 @@
+<h3>Recent Tickets</h3>
+<div class="row obb">
+  <div class="col-2 titl">
+    Assignee
+  </div>
+  <div class="col-4 titl">
+    Subject
+  </div>
+  <div class="col-2 titl">
+    Status
+  </div>
+  <div class="col-2 titl">
+    Last Update
+  </div>
+  <div class="col-2 titl">
+    Tracking ID
+  </div>
+</div>
+<div *ngFor="let user of users" class="some_one row">
+  <div class="col-2 some_one_title">
+    <img src="{{user.img}}" alt="">
+    <span>{{user.assignee}}</span>
+  </div>
+  <div class="col-4 ">
+    <span>{{user.subject}}</span>
+  </div>
+  <div class="col-2 ">
+    <span class="status_all {{user.css}}">{{user.status}}</span>
+  </div>
+  <div class="col-2 ">
+    <span>{{user.update}}</span>
+  </div>
+  <div class="col-2 ">
+    <span>{{user.id}}</span>
+  </div>
+</div>

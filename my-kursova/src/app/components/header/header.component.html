@@ -1,0 +1,67 @@
+<div class="header_main">
+  <div class="logo">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Todoist_logo.png" alt="">
+  </div>
+  <div class="search">
+    <form class="example-form">
+      <span class="material-icons md-dark">search </span>
+      <mat-form-field class="example-full-width">
+        <mat-label>Search projects...</mat-label>
+        <input matInput placeholder="Lets gooooooooo...">
+      </mat-form-field>
+
+
+    </form>
+  </div>
+  <div class="mini_info">
+    <div class="mini_logo">
+      <img src="https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/batman_hero_avatar_comics-512.png" alt="">
+      <button mat-button [matMenuTriggerFor]="menu">David Grey. H <mat-icon>expand_more</mat-icon></button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+    </div>
+    <div class="another">
+      <div class="size">
+        <button mat-button >
+          <mat-icon>crop_free</mat-icon>
+        </button>
+      </div>
+      <div class="email">
+        <button mat-button >
+          <mat-icon>mark_email_unread</mat-icon>
+        </button>
+      </div>
+      <div class="not">
+        <button mat-button matBadge="7" [matBadgeHidden]="hidden" (click)="toggleBadgeVisibility()">
+          <mat-icon>notifications</mat-icon>
+        </button>
+      </div>
+      <div class="shut_down">
+        <button mat-button >
+          <mat-icon>power_settings_new</mat-icon>
+        </button>
+      </div>
+      <div class="lists">
+        <button mat-button  [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <mat-icon>dialpad</mat-icon>
+            <span>Redial</span>
+          </button>
+          <button mat-menu-item disabled>
+            <mat-icon>voicemail</mat-icon>
+            <span>Check voice mail</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            <span>Disable alerts</span>
+          </button>
+        </mat-menu>
+      </div>
+    </div>
+  </div>
+</div>

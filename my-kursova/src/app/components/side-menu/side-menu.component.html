@@ -1,0 +1,78 @@
+<div class="info_user">
+  <img src="https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/batman_hero_avatar_comics-512.png" alt="">
+  <div class="div">
+    <h3>
+      David Grey. H
+    </h3>
+    <p>
+      Project Manager
+    </p>
+  </div>
+  <mat-icon>beenhere</mat-icon>
+</div>
+<div class="menu_all">
+  <ul>
+    <li><a routerLink="">
+      Dashboard
+      <mat-icon>
+        home
+      </mat-icon>
+    </a></li>
+    <li><a routerLink="ui">
+      UI Elements
+      <mat-icon>
+        adjust
+      </mat-icon>
+    </a></li>
+    <li><a routerLink="icons">
+      Icons
+      <mat-icon>
+        contacts
+      </mat-icon>
+    </a></li>
+    <li><a routerLink="forms">
+      Forms
+      <mat-icon>
+        format_list_bulleted
+      </mat-icon>
+    </a></li>
+    <li><a routerLink="charts">
+      Charts
+      <mat-icon>
+        assessment
+      </mat-icon>
+    </a></li>
+    <li><a routerLink="tables">
+      Tables
+      <mat-icon>
+        table_chart
+      </mat-icon>
+    </a></li>
+    <li><a routerLink="sample">
+      Sample Pages
+      <mat-icon>
+        support_agent
+      </mat-icon>
+    </a></li>
+  </ul>
+</div>
+<div class="to_do">
+  <h3>
+    Projects
+  </h3>
+  <div class="end_end">
+    <button mat-raised-button color="accent">+ Add a Project</button>
+  </div>
+</div>
+<div class="end">
+  <label id="example-radio-group-label">Categories</label>
+  <mat-radio-group
+    aria-labelledby="example-radio-group-label"
+    class="example-radio-group"
+    [(ngModel)]="favoriteSeason">
+    <mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
+      {{season}}
+    </mat-radio-button>
+  </mat-radio-group>
+  <div>Your choose: {{favoriteSeason}}</div>
+</div>
